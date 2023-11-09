@@ -2,14 +2,24 @@
 
 @extends('layouts.default')
 @section('page')
-<div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
+<div>
 
     <p>{{ $name }}</p><br>
     <p>{{ $age }}</p>
   <div class="bg-white border ">
 
       @foreach ( $pizzas as $pizza )
-      <h1> {{ $loop->index }} {{ $pizza['name'] }}-{{ $pizza['type'] }}-{{ $pizza['base'] }}</h1>
+      <h1> Id: {{ $loop->index }}</h1>
+      <div class="card">
+        <img width="50" height="100" src="/img/bdu.jpg" alt="Avatar" style="width:100%;">
+        <div class="container">
+          <h4><b>{{ $pizza['name'] }}</b></h4>
+          <p>{{ $pizza['type'] }}-{{ $pizza['base'] }}</p>
+        </div>
+        @role('editor'|'admin')
+        <button>Edit</button>
+        @endrole
+      </div>
       @endforeach
     </div>
 

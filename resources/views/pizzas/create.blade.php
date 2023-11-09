@@ -5,30 +5,28 @@
             creating pizzas
             <form action="/pizzas" method="POST">
                 @csrf
-                <div style="margin: 32px">
-                    <div>
+                <div class="imgcontainer">
+                    <img src="/img/bdu.jpg" alt="Avatar" class="avatar">
+                  </div>
 
-                        name:
-                        <input type="text" name="name">
-                    </div>
+                  <div class="container">
+                    <label for="name"><b>Name</b></label>
+                    <input type="text" placeholder="Enter name" name="name" required>
 
-                    <div>
-                        type: <input type="text" name="type">
+                    <label for="type"><b>Type</b></label>
+                    <input type="text" placeholder="Enter type" name="type" required>
+                    <label for="base"><b>Base</b></label>
+                    <input type="text" placeholder="Enter base" name="base" required>
+                    <label for="price"><b>Price</b></label>
+                    <input type="number" placeholder="Enter price" name="price" required>
 
-                    </div>
-                    <div>
+                    <button type="submit">Order</button>
 
-                        base:
-                        <input type="text" name="base">
-                    </div>
-                    <div>
+                  </div>
 
-                        Price:
-                        <input type="number" name="price">
-                    </div>
-                    <input type="submit" name="Add pizza">
+
             </form>
-            div>
+
         </h1>
     </div>
 @endsection
