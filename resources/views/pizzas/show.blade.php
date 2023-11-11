@@ -8,7 +8,7 @@
     <form action="/pizzas/{{ $pizza->id }}" method="POST">
         @csrf
         @method('DELETE')
-        <button>Confirm</button>
+        <button>Confirm order</button>
     </form>
 </div>
     <div>
